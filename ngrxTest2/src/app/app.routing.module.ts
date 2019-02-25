@@ -13,7 +13,7 @@ export const routes: Routes = [
   },
   {
     path:         '**',
-    loadChildren: './modules/not-found/not-found#NotFoundModule'
+    loadChildren: './modules/not-found/not-found.module#NotFoundModule'
   }
 ];
 
