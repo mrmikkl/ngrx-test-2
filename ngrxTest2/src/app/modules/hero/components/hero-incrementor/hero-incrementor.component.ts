@@ -25,14 +25,6 @@ import { Component, OnInit } from '@angular/core';
                                  <div>
                                      <button (click)="decrement()"
                                              class="btn btn-primary mr-1"
-                                             type="button"><i class="fas fa-minus"></i></button>
-                                     <button (click)="increment()"
-                                             class="btn btn-primary"
-                                             type="button"><i class="fas fa-plus"></i></button>
-                                 </div>
-                                 <div>
-                                     <button (click)="decrement()"
-                                             class="btn btn-primary mr-1"
                                              type="button">OMA
                                      </button>
                                      <button (click)="increment()"
