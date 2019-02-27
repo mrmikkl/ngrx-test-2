@@ -1,3 +1,5 @@
+import { HeroCounterState } from './hero-counter';
+
 export interface AppState {
-  a: any;
+  heroCounterState: HeroCounterState;
 }
