@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AppStoreModule } from './store/app.store.module';
+import { AppStoreModule } from '../store/app.store.module';
 
 export const coreGuards = [];
 
