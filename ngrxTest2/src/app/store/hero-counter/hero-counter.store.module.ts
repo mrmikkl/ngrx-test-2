@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { heroCounterReducer } from './hero-counter.reducer';
-import { EffectsModule } from '@ngrx/effects';
 import { HeroCounterEffects } from './hero-counter.effects';
+import { EffectsModule } from '@ngrx/effects';
 
 export const heroCounterStoreName = 'heroCounter';
 

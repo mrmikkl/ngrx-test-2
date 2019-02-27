@@ -3,10 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeroCounterStoreModule } from './hero-counter';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-
-export const featureStores = [
-  HeroCounterStoreModule
-];
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 export const appStoreComponents = [];
 
@@ -17,7 +14,8 @@ export const appStoreProviders = [];
     CommonModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    ...featureStores
+    HeroCounterStoreModule,
+    StoreDevtoolsModule.instrument()
   ],
   providers:    appStoreProviders,
   declarations: appStoreComponents

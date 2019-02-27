@@ -1,7 +1,7 @@
 import { HeroCounterState, initialHeroCounterState } from './hero-counter.state';
 import { HeroCounterActions, HeroCounterActionTypes } from './hero-counter.actions';
 
-export function heroCounterReducer(state = initialHeroCounterState, action: HeroCounterActions): HeroCounterState {
+export function heroCounterReducer(state: HeroCounterState = initialHeroCounterState, action: HeroCounterActions): HeroCounterState {
   switch (action.type) {
     case HeroCounterActionTypes.INCREMENT: {
       return {
@@ -22,6 +22,11 @@ export function heroCounterReducer(state = initialHeroCounterState, action: Hero
         ...state,
         value:        0,
         inverseValue: 0
+      };
+    }
+    default: {
+      return {
+        ...state
       };
     }
   }

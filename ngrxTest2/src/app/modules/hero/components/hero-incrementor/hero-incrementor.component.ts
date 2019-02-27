@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../../../store';
+import { selectHeroCounterState, selectHeroCounterValue } from '../../../../store/hero-counter';
 
 @Component({
   selector:  'app-hero-incrementor',
@@ -40,13 +43,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-incrementor.component.scss']
 })
 export class HeroIncrementorComponent implements OnInit {
-  // TODO put in store
-  value = 0;
+  value;
 
-  constructor() {
+  constructor(private store$: Store<AppState>) {
   }
 
   ngOnInit() {
+    this.store$.select(selectHeroCounterState).subscribe(bla => console.log(bla));
+    this.store$.select(selectHeroCounterValue).subscribe(bla => console.log(bla));
   }
 
   increment(): void {

@@ -7,12 +7,12 @@ import { AppStoreModule } from './store';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AppStoreModule
+    AppComponent
   ],
   imports:      [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppStoreModule
   ],
   providers:    [],
   bootstrap:    [AppComponent]
